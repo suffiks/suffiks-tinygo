@@ -195,3 +195,15 @@ func UpdateResource[T any](group, version, resource string, spec any) (T, error)
 
 	return v, nil
 }
+
+func DeleteResponse(errorMessage string) uint64 {
+	if errorMessage == "" {
+		return 0
+	}
+
+	dr := &protogen.DeleteResponse{
+		Error: errorMessage,
+	}
+
+	return byteToPtrAndSize(marshal(dr))
+}

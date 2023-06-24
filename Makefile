@@ -9,6 +9,7 @@ gen-proto:
 		--go-vtproto_out=. \
     --go-vtproto_opt=features=marshal+unmarshal+size \
 
+	rm -rf protogen
 	mv ./github.com/suffiks/suffiks/extension/protogen ./protogen
 	rm -rf ./github.com
 

@@ -58,3 +58,11 @@ Build the extension using:
 ```bash
 CGO_ENABLED=0 tinygo build -o build/release.wasm -scheduler=none -target=wasi .
 ```
+
+## Development
+
+To generate the protobuf files, ensure that Suffiks is cloned into the same directory as this repository.
+
+```bash
+make gen-proto
+```
