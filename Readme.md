@@ -27,8 +27,10 @@ func Sync() {
 }
 
 //export Delete
-func Delete() {
+func Delete() uint64 {
 	// if you don't want to delete, you don't have to implement this function
+	// If you delete, you should return suffiks.DeleteResponse(message string) if you
+	// encounter an error, otherwise just return 0
 }
 
 //export Defaulting
