@@ -52,3 +52,9 @@ func Validate(typ protogen.ValidationType) {
 // main has to be defined, but is not used
 func main() {}
 ```
+
+Build the extension using:
+
+```bash
+CGO_ENABLED=0 tinygo build -o build/release.wasm -scheduler=none -target=wasi .
+```
